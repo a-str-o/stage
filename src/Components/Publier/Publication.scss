@@ -1,0 +1,402 @@
+.stepper-container {
+    margin: auto;
+    .MuiFormControl-root {
+        width: 100%;
+    }
+    .MuiOutlinedInput-root {
+        position: relative;
+        border-radius: 25px !important;
+    }
+}
+.file-upload input[type='file'] {
+    display: none;
+  }
+  .rounded-lg {
+    border-radius: 1rem;
+  }
+  
+  .custom-file-label.rounded-pill {
+    border-radius: 50rem;
+  }
+  
+  .custom-file-label.rounded-pill::after {
+    border-radius: 0 50rem 50rem 0;
+  }
+  .root-publication--container {
+    padding-top: 50px;
+    margin: auto;
+    margin-top: 80px;
+    padding-bottom: 80px;
+    .step-title--container {
+      width: 80%;
+      margin-left: 60px;
+  }
+    .publication-form--container {
+      margin-top: 0px;
+  }
+
+  .register-next-button-container.register-first-next {
+    text-align: center;
+}
+p.MuiTypography-root.MuiTypography-body1.MuiTypography-colorTextSecondary {
+  color: grey;
+}
+
+button.register-prev-button.btn.btn-primary.prev-button {
+  background-color: #F9BD2D;
+  border-color: #F9BD2D;
+  border-radius: 25px;
+  min-width: 280px;
+  margin: auto;
+  height: 50px;
+  box-shadow: 0 4px 4px 0px #f9bd2dc9;
+}
+button.register-prev-button.btn.btn-primary.next-button {
+  background-color: #FB5452;
+  border-color: #FB5452;
+  border-radius: 25px;
+  min-width: 280px;
+  margin: auto;
+  height: 50px;
+  box-shadow: 0 4px 4px 0px #fb5452;
+}
+svg.MuiSvgIcon-root.MuiSelect-icon.MuiSelect-iconOutlined {
+  height: 100%;
+  margin: 0;
+  vertical-align: middle;
+  /* top: -10px; */
+  background-color: #F9BD2D;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  border-radius: 0px 50px 50px 0px;
+  right: 0px;
+  width: 50px;
+}
+.MuiSelect-select:focus {
+  border-radius: 0;
+  background-color:white;
+}
+
+}
+.map--container {
+  height: 300px;
+  min-height: 300px;
+}
+.markerpoint-desktop {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #f3be15;
+  border: white 4px solid;
+  border-radius: 10px 10px 0px 10px;
+  box-shadow: 1px 1px 10px -3px black;
+  position: relative;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+
+.publication-verification--container {
+  margin: auto;
+  text-align: center;
+  background-color: #FCB75B;
+  padding: 20px;
+  border-radius: 20px;
+  .icon--warning {
+    margin: auto;
+    text-align: center;
+    svg.MuiSvgIcon-root {
+      width: 6rem;
+      height: 6rem;
+      color: #FB5253;
+  }
+}
+.warning-text-container {
+  font-size: 18px;
+  color: white;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+p.warning {
+  color: white;
+}
+
+p.recap-title {
+  color: white;
+  text-decoration: underline;
+  font-weight: 800;
+  span {
+    color: white;
+}
+}
+.rec-text-container{
+
+p.recap-item {
+  color: white;
+  span {
+    color: white;
+}
+}
+}
+span.item-data {
+  color: white;
+  font-weight: bold;
+}
+
+.register-prev-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.register-next-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+h3.finance-item-title {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+}
+.Stepperpublication-enter {
+  opacity: 0;
+
+}
+.Stepperpublication-enter-active {
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+.Stepperpublication-exit {
+  opacity: 0;
+}
+.Stepperpublication-exit-active {
+  opacity: 0;
+  transition: opacity 1ms
+}
+
+.register-prev-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-next-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.publication-verification--container .icon--check svg.MuiSvgIcon-root {
+  width: 6rem;
+  height: 6rem;
+  color: #2BB5A3;
+}
+.rec-text-container{
+  a {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    p.recap-item {
+      color: white;
+      margin-top: 20px;
+  }
+}
+}
+
+.stepper-container {
+  margin: auto;
+  padding-top: 0px;
+  .register-head-container {
+      text-align: left;
+      /* margin-top: 50px; */
+      border-left: solid 5px #FCB75B;
+      padding-left: 10px;
+  }
+}
+p.MuiFormHelperText-root {
+  color: #f44336;
+}
+p.step-subtitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #aeaeae;
+}
+
+.reacp-button-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+button.btn.btn-primary.publication-confirm-button.confirm-button-type-left {
+  background-color: #FB5452;
+  border-color: #FB5452;
+  border-radius: 25px;
+  min-width: 280px;
+  margin: auto;
+  /* margin-top: 0; */
+  height: 50px;
+  box-shadow: 0 4px 4px 0px #fb5452;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+button.btn.btn-primary.publication-confirm-button.confirm-button-type-right {
+  background-color: #F9BD2D;
+  border-color: #F9BD2D;
+  border-radius: 25px;
+  min-width: 280px;
+  margin: auto;
+  height: 50px;
+  box-shadow: 0 4px 4px 0px #f9bd2dc9;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 15px;
+}
+
+.loadgin-registration--container {
+  text-align: center;
+  margin-top: 40px;
+  svg.MuiCircularProgress-svg {
+    color: #fb5453;
+}
+}
+
+.MuiAutocomplete-root.MuiAutocomplete-hasClearIcon.MuiAutocomplete-hasPopupIcon {
+  width: 100% !important;
+}
+p.map-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #424242;
+}
+
+.checkbox-item--inner {
+  display: flex;
+  .checkbox-label-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+}
+.subitem-details--container {
+  border-left: 5px solid #fab45a7a;;
+  margin-left: 60px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  p.unites-title {
+    font-weight: 600;
+    padding-left: 20px;
+}
+}
+
+.autorisation-field--inner {
+  display: flex;
+  margin: auto;
+  vertical-align: middle;
+  p.autorisation-field-label {
+    margin: auto;
+}
+.stepper-container .MuiOutlinedInput-root {
+  position: relative;
+  border-radius: 5px !important;
+}
+}
+p.checkbox--helper {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.list-items-pp--container{
+  .pp-input-item--container {
+    margin-top: 10px;
+}
+.root-publication--container svg.MuiSvgIcon-root.MuiSelect-icon.MuiSelect-iconOutlined {
+  fill: currentColor !important;
+  width: 1em !important;
+  height: 1em !important;
+  display: inline-block !important;
+  font-size: 1.5rem !important;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms !important;
+  flex-shrink: 0 !important;
+  user-select: none !important;
+  top: calc(50% - 12px) !important;
+    color: rgba(0, 0, 0, 0.54) !important;
+    right: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+
+}
+.pp-input-item--container {
+  height: 100%;
+}
+.MuiFormControl-root.MuiTextField-root {
+  height: 100%;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-marginDense.MuiOutlinedInput-marginDense {
+  height: 100%;
+}
+}
+
+.ppp-header--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .pp-head-title {
+    /* display: table-cell; */
+    /* vertical-align: middle; */
+    padding-top: 12px;
+}
+
+}
+
+.finance-item--container {
+  width: 100%;
+  margin-top: 20px;
+  padding-left: 20px;
+  .MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-md-12 {
+    margin-top: 20px;
+}
+
+}
+
+h3.finance-item-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #424242;
+  }
+}
+
+
+.finance-item-title-rappel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size : 1.2rem;
+  span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #424242;
+  }
+}
+
+.type-item--container.type-item-selected {
+  align-items: center;
+  border: solid #e2e2e2;
+  border-width: 1px 1px 5px;
+  border-radius: .2rem;
+  color: #3a3a3a;
+  cursor: pointer;
+  display: inline-flex;
+  height: 9.6rem;
+  justify-content: center;
+  margin-top: 1.0666666667rem;
+  min-width: 10.6666666667rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  border-color: #1e91ff;
+  z-index: 2;
+}

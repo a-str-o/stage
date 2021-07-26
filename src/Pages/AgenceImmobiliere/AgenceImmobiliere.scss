@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+
+.container {
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    height: 400px;
+}
+.container-block .header-container {
+    display: inline-block;
+    margin: 20px;
+ }
+
+.button {
+    background-color: #0f2690;
+    border-color: #0f2690;
+    color: #fff;
+    text-decoration: none;
+}
+.text-title {
+    color: #ffffff;
+    
+}
+.back {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.landing-wrapper {
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+  }
+
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media only screen and (min-width: 640px) {
+    .landing-wrapper {
+      background-size: 0px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
+  }
+  
+/* Large devices (laptops/desktops, 1024px and up) */
+  @media only screen and (min-width: 1024px) {
+    .landing-wrapper {
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: top left;
+    }
+  }
