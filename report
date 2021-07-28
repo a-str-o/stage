@@ -1,0 +1,6 @@
+i added a button for publier page so it will be easy to enter it
+i added SET_PUBLICATION_VILLAS in listingReducer to reduce data in the store
+the  this.state = {} in PublicationVilla do we use same variabiles in appartement or do we need to change some of them
+for now im using the same
+PublicationVilla i did 2 input with the help of ur code (it was helpfull thanks)
+i will finished it tomorrow and after that i will style it i have so much idea that i wanna test

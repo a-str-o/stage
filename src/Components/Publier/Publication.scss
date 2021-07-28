@@ -1,3 +1,141 @@
+.cards {
+  padding: 1rem;
+  background: #fff;
+}
+.form {
+  height: 20px;
+}
+h1 {
+  text-align: center;
+}
+
+.cards__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards__wrapper {
+  position: relative;
+}
+
+.cards__items {
+  margin-bottom: 10px;
+}
+
+.cards__item {
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+
+.cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  max-width: calc((100%) - 20px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1f98f4;
+  box-sizing: border-box;
+}
+
+.cards__item__text {
+  color: #252e48;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 84%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards__items {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+.conCenter{
+  width: 70%;
+}
+.spaces {
+  margin-top: 20px;
+  height: 40px;
+}
+.space {
+  margin-top: 10px;
+}
+
+.spacesVilla {
+  height: 40px;
+  margin-top: 10px;
+}
+
+.textfield {
+  margin-top: 40px;
+}
+.textfield1 {
+  margin-top: 20px;
+}
+.map {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 30px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+div:focus {
+  background-color :#2ea7f9;
+}
+
+
 .stepper-container {
     margin: auto;
     .MuiFormControl-root {
@@ -43,29 +181,29 @@ p.MuiTypography-root.MuiTypography-body1.MuiTypography-colorTextSecondary {
 }
 
 button.register-prev-button.btn.btn-primary.prev-button {
-  background-color: #F9BD2D;
-  border-color: #F9BD2D;
+  background-color: #2ea7f9;
+  border-color: #2ea7f9;
   border-radius: 25px;
   min-width: 280px;
   margin: auto;
   height: 50px;
-  box-shadow: 0 4px 4px 0px #f9bd2dc9;
+  box-shadow: 0 4px 4px 0px #2ea7f9c9;
 }
 button.register-prev-button.btn.btn-primary.next-button {
-  background-color: #FB5452;
-  border-color: #FB5452;
+  background-color: #102665;
+  border-color: #102665;
   border-radius: 25px;
   min-width: 280px;
   margin: auto;
   height: 50px;
-  box-shadow: 0 4px 4px 0px #fb5452;
+  box-shadow: 0 4px 4px 0px #102665;
 }
 svg.MuiSvgIcon-root.MuiSelect-icon.MuiSelect-iconOutlined {
   height: 100%;
   margin: 0;
   vertical-align: middle;
   /* top: -10px; */
-  background-color: #F9BD2D;
+  background-color: #2ea7f9;
   color: white;
   display: block;
   position: absolute;
@@ -87,7 +225,7 @@ svg.MuiSvgIcon-root.MuiSelect-icon.MuiSelect-iconOutlined {
 .markerpoint-desktop {
   width: 20px !important;
   height: 20px !important;
-  background-color: #f3be15;
+  background-color: #2ea7f9;
   border: white 4px solid;
   border-radius: 10px 10px 0px 10px;
   box-shadow: 1px 1px 10px -3px black;
@@ -226,14 +364,14 @@ p.step-subtitle {
   text-align: center;
 }
 button.btn.btn-primary.publication-confirm-button.confirm-button-type-left {
-  background-color: #FB5452;
-  border-color: #FB5452;
+  background-color: #102665;
+  border-color: #102665;
   border-radius: 25px;
   min-width: 280px;
   margin: auto;
   /* margin-top: 0; */
   height: 50px;
-  box-shadow: 0 4px 4px 0px #fb5452;
+  box-shadow: 0 4px 4px 0px #102665;
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 10px;
@@ -241,13 +379,13 @@ button.btn.btn-primary.publication-confirm-button.confirm-button-type-left {
 }
 
 button.btn.btn-primary.publication-confirm-button.confirm-button-type-right {
-  background-color: #F9BD2D;
-  border-color: #F9BD2D;
+  background-color: #2ea7f9;
+  border-color: #2ea7f9;
   border-radius: 25px;
   min-width: 280px;
   margin: auto;
   height: 50px;
-  box-shadow: 0 4px 4px 0px #f9bd2dc9;
+  box-shadow: 0 4px 4px 0px #2ea7f9c9;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 15px;

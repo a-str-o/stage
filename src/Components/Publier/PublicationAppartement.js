@@ -13,6 +13,8 @@ import TextField from '@material-ui/core/TextField';
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { theme } from '../../assets/theme';
+import { motion } from 'framer-motion';
+
 
 
 export class PublicationAppartement extends Component {
@@ -58,8 +60,6 @@ export class PublicationAppartement extends Component {
             residence_fermeeError : false,
             surfacebalconsError : false,
             surfacecaveError : false
-
-
         }
     }
 
@@ -192,8 +192,6 @@ export class PublicationAppartement extends Component {
                                 inputProps: { min: 0 }
                             }}
                             InputLabelProps={{ shrink: true }}
-
-
                         />
                     </Grid>
                     <Grid item xs={12} md={6}>
@@ -284,8 +282,6 @@ export class PublicationAppartement extends Component {
                                 <MenuItem value={"Entre 6 et 10 ans"}>Entre 6 et 10 ans</MenuItem>
                                 <MenuItem value={"Entre 11 et 20 ans"}>Entre 11 et 20 ans</MenuItem>
                                 <MenuItem value={"Plus de 20 ans"}>Plus de 20 ans</MenuItem>
-
-
                             </Select>
                         </FormControl>
                         {this.state.constructionError ? (<FormHelperText> Champs requis</FormHelperText>) : ""}
@@ -318,8 +314,6 @@ export class PublicationAppartement extends Component {
                             error={this.state.surfacebalconsError}
                             helperText={this.state.surfacebalconsError ? ("Champs requis") : ""}
                             InputLabelProps={{ shrink: true }}
-
-
                         />
                     </Grid>
 
@@ -349,8 +343,6 @@ export class PublicationAppartement extends Component {
                             error={this.state.surfacecaveError}
                             helperText={this.state.surfacecaveError ? ("Champs requis") : ""}
                             InputLabelProps={{ shrink: true }}
-
-
                         />
                     </Grid>
                     
@@ -380,8 +372,6 @@ export class PublicationAppartement extends Component {
                             error={this.state.placesparkingError}
                             helperText={this.state.placesparkingError ? ("Champs requis") : ""}
                             InputLabelProps={{ shrink: true }}
-
-
                         />
                     </Grid>
                     
@@ -519,22 +509,32 @@ export class PublicationAppartement extends Component {
                 </Grid>
 
 
-                <Grid container spacing={6}>
-                    <Grid item xs={12} md={6}>
-                        <div className="register-prev-button-container">
-                            <button onClick={() => { this.setPreviousStep(1) }} className="register-prev-button btn btn-primary prev-button">Etape précédente</button>
-                        </div>
-
-
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-
-                        <div className="register-next-button-container">
-                            <button onClick={() => { this.setNextStep(2) }} className="register-prev-button btn btn-primary next-button">Valider</button>
-                        </div>
-                    </Grid>
-
+               
+            <Grid container spacing={6}>
+                <Grid item xs={12} md={6}>
+                    <div className="register-prev-button-container">
+                        <motion.button 
+                            initial= {{x: '-100vw'}}
+                            animate={{ x: 0 }}
+                            transition={{delay: 0.2}}
+                            onClick={() => { this.setPreviousStep(1) }} 
+                            className="register-prev-button btn btn-primary prev-button">
+                            Etape précédente
+                        </motion.button>
+                    </div>
                 </Grid>
+                <Grid item xs={12} md={6}>
+                    <div className="register-next-button-container">
+                        <motion.button 
+                            initial= {{x: '-100vw'}}
+                            animate={{ x: 0 }}
+                            onClick={() => { this.setNextStep(2) }} 
+                            className="register-prev-button btn btn-primary next-button">
+                            Valider
+                        </motion.button>
+                    </div>
+                </Grid>
+            </Grid>
             </ThemeProvider>
         )
     }

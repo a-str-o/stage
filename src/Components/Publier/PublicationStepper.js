@@ -87,21 +87,14 @@ export class PublicationStepper extends Component {
             <div className='root-publication--container'>
 
                     <div className="stepper-container">
-                    <div className="register-head-container">
-                                    <div className="register-head--inner">
-                                        <div className="register-title-container">
+                                <center>
                                             <div className="register-title-inner">
                                                 <h1 className="register-title">Publier une annonce</h1>
                                             </div>
-                                        </div>
-                                        <div className="register-text-container">
                                             <div className="register-text-inner">
                                                 <p className="register-text">L'annonce sera visible sur agenz.ma</p>
                                             </div>
-                                        </div>
-
-                                    </div>
-                                </div>
+                                </center>
                                
 
                                 <CSSTransition appear={true} unmountOnExit in={this.props.listing.activeStep === 0} timeout={{enter : 300, exit : 0}} classNames="StepperPublication">

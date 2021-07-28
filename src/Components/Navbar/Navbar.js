@@ -33,12 +33,6 @@ class  Navbar extends React.Component {
                     id: 1
                 },
                 {
-                    title: 'Publicationvillas',
-                    path: '/Publicationvillas',
-                    icon: 'fa-chart-line',
-                    id: 2
-                },
-                {
                     title: 'agence immobiliere',
                     path: '/agence-immobiliere',
                     icon: 'fa-envelope-open-text',

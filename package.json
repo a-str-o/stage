@@ -12,6 +12,7 @@
     "axios": "^0.21.0",
     "chart.js": "^2.9.4",
     "firebase": "^8.3.0",
+    "framer-motion": "^4.1.17",
     "html2canvas": "^1.0.0-rc.7",
     "jwt-decode": "^3.1.2",
     "loaders.css": "^0.1.2",

@@ -1,26 +1,22 @@
-import React, { Component } from 'react'
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import { ThemeProvider } from '@material-ui/core/styles';
-import { theme } from '../../assets/theme'
-import Select from '@material-ui/core/Select';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import { connect } from "react-redux";
-import "./Publication.scss"
-import { withRouter, Prompt } from "react-router-dom"
-import ReactMapGL, { Marker, FlyToInterpolator } from 'react-map-gl'
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import PlacesAutocomplete, {
+import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
+import Axios from 'axios';
+import { motion } from 'framer-motion';
+import React, { Component } from 'react';
+import ReactMapGL, { FlyToInterpolator, Marker } from 'react-map-gl';
+import {
     geocodeByAddress,
     getLatLng
 } from "react-places-autocomplete";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { GMAPS_API_KEY } from '../../Config/GMapsConfig';
+import "./Publication.scss";
 
-import { GMAPS_API_KEY } from '../../Config/GMapsConfig'
-import InputAdornment from '@material-ui/core/InputAdornment';
-import Axios from 'axios'
 const MAPBOX_TOKEN = "pk.eyJ1IjoiYmFkcmJlbGtleml6IiwiYSI6ImNraDduNjN2bDA2MGszMG5zZHRqNm5zMzIifQ.oITjlONmSiUQsFKrZfFd3w";
 
 export class PublicationLocalisation extends Component {
@@ -178,17 +174,17 @@ export class PublicationLocalisation extends Component {
 
     render() {
         return (
-            <ThemeProvider theme={theme}>
-                <Grid container spacing={1}>
-                    <Grid item xs={12} md={6}>
-                        <Grid container spacing={4}>
-                            <Grid item xs={12}>
-                                <FormControl variant="outlined" >
-                                    <InputLabel id="demo-simple-select-outlined-label">Région</InputLabel>
+    
+                    <center >
+                        <div className="conCenter">
+                        <div className="spaces">
+                                <FormControl variant="outlined">
+                                    <InputLabel id="demo-simple-select-outlined-label" className="space">Région</InputLabel>
                                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
                                         name="nature"
+                                        className="spaces"
                                         value={this.state.region}
                                         onChange={(e) => { this.setState({ region: e.target.value }) }}
                                         label="Région"
@@ -201,15 +197,15 @@ export class PublicationLocalisation extends Component {
                                             Marrakech-Safi</MenuItem>
                                     </Select>
                                 </FormControl>
-
-                            </Grid>
-                            <Grid item xs={12}>
+                                </div>
+                                <div className="spaces">
                                 <FormControl variant="outlined" >
-                                    <InputLabel id="demo-simple-select-outlined-label">Province</InputLabel>
+                                    <InputLabel id="demo-simple-select-outlined-label" className="space">Province</InputLabel>
                                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
                                         name="nature"
+                                        className="spaces"
                                         value={this.state.province}
                                         onChange={(e) => { this.setState({ province: e.target.value }) }}
                                         label="Province"
@@ -222,15 +218,16 @@ export class PublicationLocalisation extends Component {
                                             Nouceur</MenuItem>
                                     </Select>
                                 </FormControl>
+                            </div>
 
-                            </Grid>
-                            <Grid item xs={12}>
+                            <div className="spaces">
                                 <FormControl variant="outlined" >
-                                    <InputLabel id="demo-simple-select-outlined-label">Commune/Arrondissement</InputLabel>
+                                    <InputLabel id="demo-simple-select-outlined-label" className="space">Commune/Arrondissement</InputLabel>
                                     <Select
                                         labelId="demo-simple-select-outlined-label"
                                         id="demo-simple-select-outlined"
                                         name="nature"
+                                        className="spaces"
                                         value={this.state.commune}
                                         onChange={(e) => { this.setState({ commune: e.target.value }) }}
                                         label="Commune/Arrondissement"
@@ -243,32 +240,36 @@ export class PublicationLocalisation extends Component {
                                             Anfa</MenuItem>
                                     </Select>
                                 </FormControl>
-
-                            </Grid>
-                            <Grid item xs={12} md={6}>
-                                <TextField variant="outlined" size="small" id="" label="Quartier" type="search"
+                            </div>
+                            <div className="textfield">
+                                <TextField 
+                                    variant="outlined" size="small" id="" label="Quartier" type="search"
                                     value={this.state.quartier}
                                     onChange={(e) => { this.setState({ ...this.state, quartier: e.target.value, quartierError: (e.target.value === "") }) }}
                                     error={this.state.quartierError}
                                     helperText={this.state.quartierError ? ("Champs requis") : ""}
                                     InputLabelProps={{ shrink: true }}
-                                />
-                            </Grid>
-                            <Grid item xs={12} md={6}>
-                                <TextField variant="outlined" size="small" id="" label="Adresse" type="search"
+                                /></div>
+                            <div className="textfield1">
+                                <TextField 
+                                    variant="outlined" size="small" id="" label="Adresse" type="search"
                                     value={this.state.adresse}
                                     onChange={(e) => { this.setState({ ...this.state, adresse: e.target.value, adresseError: (e.target.value === "") }) }}
                                     error={this.state.adresseError}
                                     helperText={this.state.adresseError ? ("Champs requis") : ""}
                                     InputLabelProps={{ shrink: true }}
                                 />
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={12} md={6}>
-                        <div className="map--container">
-                            <p className="map-title">Cliquez sur la carte pour géolocaliser votre projet</p>
-                            <ReactMapGL
+                            </div>
+                        <motion.div 
+                            initial= {{x: '-100vw'}}
+                            animate={{ x: 0 , y: 20 }}
+                            transition={{delay: 0.2}}
+                            className="map--container">
+                            <p className="map-title">
+                                Cliquez sur la carte pour géolocaliser votre projet
+                            </p>
+                            <div className="map">
+                            <ReactMapGL 
                                 ref={this.myMap}
                                 {...this.state.viewport}
                                 width="width: 100vw"
@@ -293,21 +294,21 @@ export class PublicationLocalisation extends Component {
 
                                     </Marker>
                                 ) : ('')}
-                            </ReactMapGL>
+                            </ReactMapGL></div>
+                        </motion.div>
+                            <div className="register-next-button-container register-first-next">
+                                <motion.button 
+                                    initial= {{x: '-100vw'}}
+                                    animate={{ x: 0 , y : 10}}
+                                    transition={{delay: 0.4}}
+                                    onClick={() => { this.setNextStep(1) }} 
+                                    className="register-prev-button btn btn-primary next-button">
+                                    {this.state.lookingForPC ? (<CircularProgress size={20} />) : "Valider"}
+                                </motion.button>
+                            </div>
                         </div>
-                    </Grid>
-                </Grid>
-                <Grid container spacing={6}>
+                    </center>
 
-                    <Grid item xs={12} md={12}>
-
-                        <div className="register-next-button-container register-first-next">
-                            <button onClick={() => { this.setNextStep(1) }} className="register-prev-button btn btn-primary next-button">{this.state.lookingForPC ? (<CircularProgress size={20} />) : "Valider"}</button>
-                        </div>
-                    </Grid>
-
-                </Grid>
-            </ThemeProvider>
         )
     }
 }

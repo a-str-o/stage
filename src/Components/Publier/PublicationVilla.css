@@ -1,0 +1,10 @@
+.TextInput {
+    margin-top: 20px;
+    width: 73%;
+}
+.b-container{
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+}

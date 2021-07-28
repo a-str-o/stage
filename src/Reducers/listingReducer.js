@@ -40,7 +40,6 @@ const listingReducer = (
         images : [],
         images_added: false,
         images_ready: false
-      
     },
     action) => {
     switch (action.type) {
@@ -97,7 +96,32 @@ const listingReducer = (
         }
       }
       return state;
-
+      //CASE VILLAS I DID THE SAME VARIABLES AND I WILL CHANGE THEM IF IT NEEDED
+      case 'SET_PUBLICATION_VILLAS': {
+        state = {
+          ...state,
+          typologie: action.data.typologie,
+          surface: action.data.surface,
+          sdb: action.data.sdb,
+          orientation: action.data.orientation,
+          construction: action.data.construction,
+          balcons: action.data.balcons,
+          cave: action.data.cave,
+          parking: action.data.parking,
+          placesparking: action.data.placesparking,
+          cheminee: action.data.cheminee,
+          calme: action.data.calme,
+          vueexceptionnelle: action.data.vueexceptionnelle,
+          chambre_service: action.data.chambre_service,
+          climatisation: action.data.climatisation,
+          ascenseur: action.data.ascenseur,
+          duplex: action.data.duplex,
+          residence_fermee: action.data.residence_fermee,
+          surfacebalcons: action.data.surfacebalcons,
+          surfacecave: action.data.surfacecave
+        }
+      }
+      return state;
       case 'SET_PUBLICATION_STEP_TWO': {
         state = {
           ...state,
